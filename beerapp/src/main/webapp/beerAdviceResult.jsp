@@ -27,6 +27,15 @@
             }
         %>
     </ul></div>
+
+    <div>
+        <%
+            response.getWriter().println("Email admina: " + request.getAttribute("emailAdmina"));
+        %>
+    </div><br>
+    <div>
+        <% response.getWriter().println("Main context: " + request.getAttribute("mainContext")); %>
+    </div>
 </div>
 </body>
 </html>

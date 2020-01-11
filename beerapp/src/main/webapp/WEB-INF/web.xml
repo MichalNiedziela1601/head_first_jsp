@@ -8,4 +8,9 @@
         <welcome-file>chooseBeer.html</welcome-file>
     </welcome-file-list>
 
+    <context-param>
+        <param-name>mainName</param-name>
+        <param-value>Head First JSP</param-value>
+    </context-param>
+
 </web-app>

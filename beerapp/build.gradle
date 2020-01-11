@@ -1,0 +1,3 @@
+gretty {
+    httpPort = 8082
+}
