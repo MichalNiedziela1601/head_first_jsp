@@ -1,3 +1,9 @@
 gretty {
     httpPort = 8082
 }
+
+war {
+    from("${projectDir}/src/webapp/resources") {
+        include '*'
+    }
+}

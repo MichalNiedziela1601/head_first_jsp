@@ -7,6 +7,36 @@
     <welcome-file-list>
         <welcome-file>chooseBeer.html</welcome-file>
     </welcome-file-list>
+    
+<!--    <context-param>-->
+<!--        <param-name>db.url</param-name>-->
+<!--        <param-value>jdbc:h2:mem</param-value>-->
+<!--    </context-param>-->
+<!--    -->
+<!--    <context-param>-->
+<!--        <param-name>db.user</param-name>-->
+<!--        <param-value>sa</param-value>-->
+<!--    </context-param>-->
+
+<!--    <context-param>-->
+<!--        <param-name>db.password</param-name>-->
+<!--        <param-value>password</param-value>-->
+<!--    </context-param>-->
+<!--    -->
+<!--    <context-param>-->
+<!--        <param-name>db.tcpServer</param-name>-->
+<!--        <param-value></param-value>-->
+<!--    </context-param>-->
+
+    <context-param>
+        <param-name>rasa</param-name>
+        <param-value>bokser</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>dog.name</param-name>
+        <param-value>Reksio</param-value>
+    </context-param>
 
     <context-param>
         <param-name>mainName</param-name>

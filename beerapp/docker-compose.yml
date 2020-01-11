@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    image: tomcat:9.0.30-jdk11-openjdk
+    ports:
+    - 8080:8080
+    - 8081:8081
+    environment:
+      - JAVA_OPTS=-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8081
+    volumes:
+    - ./tomcat/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+    - ./tomcat/manager.xml:/usr/local/tomcat/conf/Catalina/localhost/manager.xml
+    - ./build/libs/beerapp.war:/usr/local/tomcat/webapps/beerapp.war
