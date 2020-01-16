@@ -36,8 +36,9 @@ public class BeerDomainFacadeTest {
     @Test
     public void givenBrightWhenBeerAdviceThenReturnList() throws Exception {
         String genre = "light";
+        String brewery = "Okocim";
 
-        List<Beer> beers = domainFacade.beerAdvice(genre);
+        List<Beer> beers = domainFacade.beerAdvice(genre, brewery);
 
         assertThat("Okocim full", is(beers.get(0).getName()));
     }
@@ -45,8 +46,8 @@ public class BeerDomainFacadeTest {
     @Test
     public void givenDarkWhenBeerAdviceThenReturnList() throws Exception {
         String genre = "dark";
-
-        List<Beer> beers = domainFacade.beerAdvice(genre);
+        String brewery = "German Pilsner";
+        List<Beer> beers = domainFacade.beerAdvice(genre, brewery);
 
         assertThat("Groger", is(beers.get(0).getName()));
     }
@@ -54,8 +55,9 @@ public class BeerDomainFacadeTest {
     @Test
     public void givenBrownWhenBeerAdviceThenThrowError() throws Exception {
         String genre = "brown";
+        String brewery = "Okocim";
         try {
-            domainFacade.beerAdvice(genre);
+            domainFacade.beerAdvice(genre, brewery);
             Assert.fail("Should throw NoSuchElementException");
         } catch (Exception e) {
             assertThat(e, instanceOf(NoSuchElementException.class));

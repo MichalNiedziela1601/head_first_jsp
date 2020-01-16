@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface DomainFacade {
 
-    List<Beer> beerAdvice(String genre);
+    List<Beer> beerAdvice(String genre, String brewery);
 
 }

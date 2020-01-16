@@ -30,7 +30,7 @@ public class BeerDomainFacade implements DomainFacade {
     }
 
     @Override
-    public List<Beer> beerAdvice(String genre) {
-        return beerAdvice.advice(genre);
+    public List<Beer> beerAdvice(String genre, String brewery) {
+        return beerAdvice.adviceGenre(genre, brewery);
     }
 }

@@ -9,9 +9,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%@include file="resources/header.jsp"%>
     <title>Title</title>
 </head>
-<%@include file="resources/header.html"%>
 <body>
 List of beers
 <% List<Beer> beers = (List<Beer>) request.getAttribute("beers");

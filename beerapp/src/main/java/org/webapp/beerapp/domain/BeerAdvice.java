@@ -15,9 +15,10 @@ public class BeerAdvice {
         this.beerRepository = beerRepository;
     }
 
-    List<Beer> advice(String genre) {
+    List<Beer> adviceGenre(String genre, String brewery) {
         List<Beer> allBeers = beerRepository.findAll();
-        List<Beer> collect = allBeers.stream().filter(beer -> genre.equals(beer.getGenre())).collect(Collectors.toList());
+        List<Beer> collect = allBeers.stream().filter(beer -> genre.equals(beer.getGenre()) && brewery.equals(beer.getBrewery()))
+                .collect(Collectors.toList());
         if(collect.size() < 1) {
             throw new NoSuchElementException("Not found beer for this genre");
         }
