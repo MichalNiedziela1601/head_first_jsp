@@ -25,6 +25,9 @@ public class ChooseBreweryServlet extends HttpServlet {
         }else {
             String beerKind = (String) session.getAttribute("beerKind");
             String brewery = req.getParameter("brewery");
+            int par1= 6;
+            session.setAttribute("par1",par1);
+            session.removeAttribute("par2");
             DomainFacade facade = new BeerDomainFacade();
             List<Beer> beers = facade.beerAdvice(beerKind, brewery);
             req.setAttribute("beers",beers);

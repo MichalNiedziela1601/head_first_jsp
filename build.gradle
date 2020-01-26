@@ -56,3 +56,7 @@ project(':beerapp') {
         compile group: 'com.h2database', name: 'h2', version: '1.4.197'
     }
 }
+
+wrapper {
+    gradleVersion = '6.0'
+}

@@ -34,6 +34,9 @@ public class ChooseBeerServlet extends HttpServlet {
             System.out.println("Session maxInactiveInterval: " + session.getMaxInactiveInterval());
         }
         session.setAttribute("beerKind",beerKind);
+        int par1 = 2;
+        session.setAttribute("par1",par1);
+        session.setAttribute("par2","par2 attribute");
 
         req.setAttribute("emailAdmina", getServletConfig().getInitParameter("emailAdmina"));
         req.setAttribute("mainContext", getServletContext().getInitParameter("mainName"));
