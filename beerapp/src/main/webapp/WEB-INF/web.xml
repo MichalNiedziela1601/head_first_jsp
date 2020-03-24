@@ -43,4 +43,23 @@
         <param-value>Head First JSP</param-value>
     </context-param>
 
+    <context-param>
+        <param-name>adminEmail</param-name>
+        <param-value>admin@localhost.com</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>MojTestInicjal</servlet-name>
+        <jsp-file>/showHobby.jsp</jsp-file>
+        <init-param>
+            <param-name>email</param-name>
+            <param-value>kickbucket@smartview.com</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MojTestInicjal</servlet-name>
+        <url-pattern>/showHobby.jsp</url-pattern>
+    </servlet-mapping>
+
 </web-app>

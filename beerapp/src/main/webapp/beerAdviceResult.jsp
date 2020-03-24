@@ -10,14 +10,14 @@
 <%@ page import="org.webapp.beerapp.model.Beer" %>
 <html>
 <head>
-    <%@include file="resources/header.jsp"%>
+    <%@include file="header.html" %>
     <title>Beer Advice Result</title>
 </head>
 
 <body>
 
 <div class="container">
-    <h1><% response.getWriter().println("Jsp with recommendation");%></h1>
+    <h1><% response.getWriter().println("<div class=\"container\">Jsp with recommendation");%></h1>
 
     <div><ul>
         <% try {
@@ -26,6 +26,7 @@
             while (it.hasNext()) {
                 response.getWriter().print("<li>Try: " + it.next().getName() + "</li>");
             }
+            response.getWriter().println("</div>");
 
         } catch (NoSuchElementException e) {
             response.getWriter().println(e.getMessage());

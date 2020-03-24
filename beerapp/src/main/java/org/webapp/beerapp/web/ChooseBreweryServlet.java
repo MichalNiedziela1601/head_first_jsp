@@ -23,6 +23,7 @@ public class ChooseBreweryServlet extends HttpServlet {
         if(session == null) {
             System.out.println("!!!!!!!!! Session was destroyed");
         }else {
+            resp.setContentType("text/html");
             String beerKind = (String) session.getAttribute("beerKind");
             String brewery = req.getParameter("brewery");
             int par1= 6;
