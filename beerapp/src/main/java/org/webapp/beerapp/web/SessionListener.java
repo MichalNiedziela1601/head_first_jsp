@@ -29,25 +29,31 @@ public class SessionListener implements HttpSessionListener, HttpSessionAttribut
 
     @Override
     public void attributeAdded(HttpSessionBindingEvent event) {
+        System.out.println("-----------------------");
         System.out.println("Attribute added");
         System.out.println("Session id: " + event.getSession().getId());
         System.out.println("Attribute name: " + event.getName());
         System.out.println("Attribute value: " + event.getValue().toString());
+        System.out.println("-----------------------");
     }
 
     @Override
     public void attributeRemoved(HttpSessionBindingEvent event) {
+        System.out.println("-----------------------");
         System.out.println("Attribute removed");
         System.out.println("Session id: " + event.getSession().getId());
         System.out.println("Attribute name: " + event.getName());
         System.out.println("Attribute value: " + event.getValue().toString());
+        System.out.println("-----------------------");
     }
 
     @Override
     public void attributeReplaced(HttpSessionBindingEvent event) {
+        System.out.println("-----------------------");
         System.out.println("Attribute replaced");
         System.out.println("Session id: " + event.getSession().getId());
         System.out.println("Attribute name: " + event.getName());
         System.out.println("Attribute value: " + event.getValue().toString());
+        System.out.println("-----------------------");
     }
 }
